@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Project/WORKSHOP/Demo_Scenes/Final/Ruby_Example_Scene.unity
     guid: 0160895f6ec224ed19a633783a19c1f1
   - enabled: 1
-    path: Assets/Project/Tutorial/Demo_Scenes/Final/Ducko_Sample_Scene.unity
+    path: Assets/Project/WORKSHOP/Demo_Scenes/Final/Ducko_Sample_Scene.unity
     guid: ab87f43f1452713498275fad449caa73
   - enabled: 1
     path: Assets/Project/Tutorial/Demo_Scenes/Final/SugarLand_Example_Scene.unity
