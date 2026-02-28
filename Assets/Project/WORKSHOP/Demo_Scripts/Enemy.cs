@@ -5,14 +5,19 @@ using UnityEngine;
 		// ====== ENEMY MOVEMENT ========
 		Rigidbody2D rigidbody2d;
 		// buat variable speed dengan tipe data float
+		public float speed;
 	
 		// buat variable vertical dengan tipe data bool (boolean)
+		public bool vertical;
 
 		// buat variable changeTime dengan tipe data float
+		public float changeTime = 3.0f;
 
 		// buat variable timer dengan tipe data float
+		private float timer;
 
 		// buat variable direction dengan tipe data int (integer)
+		private int direction = 1;
 		private bool broken = true;
 		public bool isBroken { get { return broken; }}
 
@@ -40,7 +45,7 @@ using UnityEngine;
 			rigidbody2d = GetComponent<Rigidbody2D>();
 			animator = GetComponent<Animator>();
 			audioSource = GetComponent<AudioSource>();
-			// timer = changeTime;
+			// set default value variable the for the first time ;
 		}
 	
 		void Update()
@@ -57,18 +62,18 @@ using UnityEngine;
            
 			Vector2 position = rigidbody2d.position;
 			
-			// if (vertical)
-			// {
-			// 	position.y = position.y + speed * direction * Time.deltaTime;
-			// 	animator.SetFloat("Move X", 0);
-			// 	animator.SetFloat("Move Y", direction);
-			// }
-			// else
-			// {
-			// 	position.x = position.x + speed * direction * Time.deltaTime;
-			// 	animator.SetFloat("Move X", direction);
-			// 	animator.SetFloat("Move Y", 0);
-			// }
+			if (vertical)
+			{
+				position.y = position.y + speed * direction * Time.deltaTime;
+				animator.SetFloat("Move X", 0);
+				animator.SetFloat("Move Y", direction);
+			}
+			else
+			{
+				position.x = position.x + speed * direction * Time.deltaTime;
+				animator.SetFloat("Move X", direction);
+				animator.SetFloat("Move Y", 0);
+			}
 			
 			rigidbody2d.MovePosition(position);
 		}

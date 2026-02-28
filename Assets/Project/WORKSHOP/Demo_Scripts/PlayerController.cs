@@ -144,7 +144,7 @@ using UnityEngine.InputSystem;
             rigidbody2d.MovePosition(position);
         }
 
-        [ContextMenu("Hit -1 healt")]
+
         public void ChangeOneHealth()
         {
             ChangeHealth(-1);
@@ -164,7 +164,7 @@ using UnityEngine.InputSystem;
                 damageCooldown = timeInvincible;
                 animator.SetTrigger("Hit");
             }
-            currentHealth = Mathf.Clamp(currentHealth + amount, -1, maxHealth);
+            currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
             UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
         }
 

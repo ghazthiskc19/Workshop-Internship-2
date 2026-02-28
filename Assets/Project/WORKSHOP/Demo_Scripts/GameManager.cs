@@ -49,14 +49,6 @@ using UnityEngine.SceneManagement;
 
         bool AllEnemiesFixed()
         {
-            // Foreach untuk mengecek apakah eneny sudah diperbaiki semua atau belum 
-            foreach (Enemy enemy in enemies)
-            {
-                if (enemy.isBroken)
-                {
-                    return false;
-                }
-            }
             return true;
         }
 
